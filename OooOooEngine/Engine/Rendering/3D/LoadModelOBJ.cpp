@@ -139,16 +139,19 @@ std::vector<SubMesh> LoadModelOBJ::GetSubMeshes() {
 }
 
 BoundingBox LoadModelOBJ::GetBoundingBox() {
-	box.minVert = vertices[0];
-	box.maxVert = vertices[0];
-	for (int i = 1; i < vertices.size(); i++) {
-		box.minVert.x = box.minVert.x < vertices[i].x ? box.minVert.x : vertices[i].x;
-		box.minVert.y = box.minVert.y < vertices[i].y ? box.minVert.y : vertices[i].y;
-		box.minVert.z = box.minVert.z < vertices[i].z ? box.minVert.z : vertices[i].z;
+	if (vertices.size() > 0) {
+		box.minVert = vertices[0];
+		box.maxVert = vertices[0];
+		for (int i = 1; i < vertices.size(); i++) {
+			box.minVert.x = box.minVert.x < vertices[i].x ? box.minVert.x : vertices[i].x;
+			box.minVert.y = box.minVert.y < vertices[i].y ? box.minVert.y : vertices[i].y;
+			box.minVert.z = box.minVert.z < vertices[i].z ? box.minVert.z : vertices[i].z;
 
-		box.maxVert.x = box.maxVert.x > vertices[i].x ? box.maxVert.x : vertices[i].x;
-		box.maxVert.y = box.maxVert.y > vertices[i].y ? box.maxVert.y : vertices[i].y;
-		box.maxVert.z = box.maxVert.z > vertices[i].z ? box.maxVert.z : vertices[i].z;
+			box.maxVert.x = box.maxVert.x > vertices[i].x ? box.maxVert.x : vertices[i].x;
+			box.maxVert.y = box.maxVert.y > vertices[i].y ? box.maxVert.y : vertices[i].y;
+			box.maxVert.z = box.maxVert.z > vertices[i].z ? box.maxVert.z : vertices[i].z;
+		}
+		return box;
 	}
-	return box;
+	return BoundingBox();
 }
