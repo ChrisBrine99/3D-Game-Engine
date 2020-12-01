@@ -28,8 +28,9 @@ bool CoreEngine::OnCreate(std::string name_, int width_, int height_) {
 	SDL_WarpMouseInWindow(window->GetWindow(), width_ / 2, height_ / 2);
 	MouseEventListener::RegisterEngineObject(this);
 
-	ShaderHandler::GetInstance()->CreateProgram("ColorShader", "Engine/Shaders/ColorVertexShader.glsl", "Engine/Shaders/ColorFragmentShader.glsl");
-	ShaderHandler::GetInstance()->CreateProgram("BasicShader", "Engine/Shaders/VertexShader.glsl", "Engine/Shaders/FragmentShader.glsl");
+	ShaderHandler::GetInstance()->CreateProgram("ColorShader",		"Engine/Shaders/ColorVertexShader.glsl",		"Engine/Shaders/ColorFragmentShader.glsl");
+	ShaderHandler::GetInstance()->CreateProgram("BasicShader",		"Engine/Shaders/VertexShader.glsl",				"Engine/Shaders/FragmentShader.glsl");
+	ShaderHandler::GetInstance()->CreateProgram("SpriteShader",		"Engine/Shaders/SpriteVertShader.glsl",			"Engine/Shaders/SpriteFragShader.glsl");
 
 	if (gameInterface) {
 		if (!gameInterface->OnCreate()) { // Game Interface failed to initialize
@@ -147,8 +148,9 @@ void CoreEngine::Render() {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	if (gameInterface) { // Render the Game
+	if (gameInterface) { // Render the Game and GUI
 		gameInterface->Render();
+		gameInterface->Draw();
 	}
 
 	// Swap the buffer frame

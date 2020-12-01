@@ -4,7 +4,6 @@
 #include "../../Engine/Core/CoreEngine.h"
 
 class GameScene : public Scene {
-private:
 public:
 	GameScene();
 	virtual ~GameScene();
@@ -12,6 +11,7 @@ public:
 	virtual bool OnCreate();
 	virtual void Update(const float deltaTime_);
 	virtual void Render();
+	virtual void Draw();
 };
 
 #endif

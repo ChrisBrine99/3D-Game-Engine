@@ -140,6 +140,8 @@
     <ClCompile Include="Game\Game1.cpp" />
     <ClCompile Include="Engine\Rendering\3D\LoadModelOBJ.cpp" />
     <ClCompile Include="Engine\FX\LightSource.cpp" />
+    <ClCompile Include="Engine\Component\GUIImageComponent.cpp" />
+    <ClCompile Include="Engine\GUI\GUIObject.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Engine\Core\Window.cpp" />
     <ClCompile Include="Engine\Core\CoreEngine.cpp" />
@@ -154,8 +156,10 @@
     <ClCompile Include="Engine\Graphics\MaterialHandler.cpp" />
     <ClCompile Include="Engine\FX\MaterialLoader.cpp" />
     <ClCompile Include="Engine\Core\OctSpatialPartition.cpp" />
+    <ClCompile Include="Engine\GUI\SpriteSurface.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Component\Component.h" />
     <ClInclude Include="Engine\Math\CollisionHandler.h" />
     <ClInclude Include="Engine\Math\CollisionDetection.h" />
     <ClInclude Include="Engine\Camera\Camera.h" />
@@ -183,6 +187,10 @@
     <ClInclude Include="Engine\Graphics\MaterialHandler.h" />
     <ClInclude Include="Engine\FX\MaterialLoader.h" />
     <ClInclude Include="Engine\Core\OctSpatialPartition.h" />
+    <ClInclude Include="Engine\GUI\SpriteSurface.h" />
+    <ClInclude Include="Engine\Component\GUIComponent.h" />
+    <ClInclude Include="Engine\Component\GUIImageComponent.h" />
+    <ClInclude Include="Engine\GUI\GUIObject.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Engine\Shaders\ColorFragmentShader.glsl" />

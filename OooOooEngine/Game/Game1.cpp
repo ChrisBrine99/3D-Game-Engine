@@ -30,6 +30,10 @@ void Game1::Render() {
 	curScene->Render();
 }
 
+void Game1::Draw() {
+	curScene->Draw();
+}
+
 void Game1::BuildScene() {
 	delete curScene, curScene = nullptr;
 	// Load in the new scene

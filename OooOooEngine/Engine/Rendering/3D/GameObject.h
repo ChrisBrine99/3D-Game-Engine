@@ -1,6 +1,7 @@
 #ifndef GAMEOBJECT_H
 #define GAMEOBJECT_H
 
+#include "../../Component/Component.h"
 #include "Model.h"
 
 class GameObject {
@@ -16,6 +17,8 @@ private:
 
 	BoundingBox box;
 	bool isHit;
+
+	std::vector<Component*> components;
 public:
 	GameObject(Model* model_, glm::vec3 position_ = glm::vec3(), glm::vec3 rotation_ = glm::vec3(0.0f, 1.0f, 0.0f), float angle_ = 0.0f, glm::vec3 scaleFactor_ = glm::vec3(1.0f));
 	~GameObject();
@@ -41,6 +44,45 @@ public:
 
 	void SetName(std::string name_);
 	std::string GetName() const;
+
+	template<typename T> void AddComponent() {
+		// Verifying that this Component isn't being added twice to the same object
+		if (T* t = GetComponent<T>()) {
+			DebugLogger::Warning("This component already exists on the game object!", "GameObject.h", __LINE__);
+			return;
+		}
+		// Ensuring that the component being added is actually a child of component
+		Component* component = dynamic_cast<Component*>(new T());
+		if (component == nullptr) {
+			DebugLogger::Error("Object attempting to be added isn't a child of the Component.h parent class!", "GameObject.h", __LINE__);
+			delete component, component = nullptr;
+			return;
+		}
+		// If the component passes both checks, add it to the vector
+		components.push_back(component);
+		component->OnCreate(this);
+	}
+
+	template<typename T> bool RemoveComponent() {
+		for (auto it = components.begin(); it != components.end(); it++) {
+			if (T* comp = dynamic_cast<T*>(*it)) {
+				delete comp, comp = nullptr;
+				components.erase(it);
+				return true;
+			}
+		}
+		DebugLogger::Warning("That component doesn't exist on the current game object!", "GameObject.h", __LINE__);
+		return false;
+	}
+
+	template<typename T> T* GetComponent() {
+		for (size_t i = 0; i < components.size(); i++) {
+			if (T* comp = dynamic_cast<T*>(components[i])) {
+				return comp;
+			}
+		}
+		return nullptr;
+	}
 };
 
 #endif

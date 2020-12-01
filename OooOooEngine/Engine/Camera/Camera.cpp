@@ -15,7 +15,7 @@ Camera::Camera() {
 	pitch = 0.0f;
 	glm::vec2 windowSize = CoreEngine::GetInstance()->GetWindowSize();
 	perspectiveMat = glm::perspective(fov, windowSize.x / windowSize.y, nearPlane, farPlane);
-	orthographicMat = glm::ortho(0.0f, windowSize.x, 1.0f, windowSize.y, -1.0f, 1.0f);
+	orthographicMat = glm::ortho(0.0f, windowSize.x, 0.0f, windowSize.y, -1.0f, 1.0f);
 
 	lights = std::vector<LightSource*>();
 	lights.reserve(5);

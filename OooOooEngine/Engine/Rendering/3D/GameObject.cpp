@@ -1,14 +1,12 @@
 #include "GameObject.h"
 
-GameObject::GameObject(Model* model_, glm::vec3 position_, glm::vec3 rotation_, float angle_, glm::vec3 scaleFactor_) {
+GameObject::GameObject(Model* model_, glm::vec3 position_, glm::vec3 rotation_, float angle_, glm::vec3 scaleFactor_) : 
+	modelInstance(-1), name(""), isHit(false), components(std::vector<Component*>()){
 	model = model_;
 	position = position_;
 	rotation = rotation_;
 	angle = angle_;
 	scaleFactor = scaleFactor_;
-	modelInstance = -1;
-	name = "";
-	isHit = false;
 	if (model) { // If the model exists; create its matrix
 		modelInstance = model->CreateInstance(position, rotation, angle, scaleFactor);
 		box = model->GetBoundingBox();
@@ -20,10 +18,19 @@ GameObject::GameObject(Model* model_, glm::vec3 position_, glm::vec3 rotation_, 
 GameObject::~GameObject() {
 	model->RemoveInstance(modelInstance);
 	model = nullptr;
+
+	for (auto c : components) {
+		delete c, c = nullptr;
+	}
+	components.clear();
 }
 
 void GameObject::Update(const float deltaTime_) {
 	SetAngle(angle + 0.005f);
+	// Updating all currently attached components
+	for (auto c : components) {
+		c->Update(deltaTime_);
+	}
 }
 
 void GameObject::SetAngle(float angle_) {

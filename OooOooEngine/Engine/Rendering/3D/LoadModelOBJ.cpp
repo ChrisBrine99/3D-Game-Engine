@@ -6,7 +6,6 @@ LoadModelOBJ::LoadModelOBJ() {
 	vertices = std::vector<glm::vec3>();
 	vertices.reserve(200);
 	normals = std::vector<glm::vec3>();
-
 	normals.reserve(200);
 	texCoords = std::vector<glm::vec2>();
 	texCoords.reserve(200);

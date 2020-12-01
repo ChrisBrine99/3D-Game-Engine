@@ -1,10 +1,8 @@
 #include "GameScene.h"
+#include "../../Engine/Component/GUIImageComponent.h"
 
-GameScene::GameScene() {
-}
-
-GameScene::~GameScene() {
-}
+GameScene::GameScene() {}
+GameScene::~GameScene() {}
 
 bool GameScene::OnCreate() {
 	DebugLogger::Info("Creating Game Scene", "GameScene.cpp", __LINE__);
@@ -25,7 +23,15 @@ bool GameScene::OnCreate() {
 
 	GameObject* shape = new GameObject(apple, glm::vec3(0.0f, 0.0f, 1.0f));
 	SceneGraph::GetInstance()->AddGameObject(shape, "Apple1");
+	//shape->AddComponent<TestComponent>();
 	shape->SetScale(glm::vec3(0.5f));
+
+	GUIObject* gui = new GUIObject(glm::vec2(0.0f));
+	gui->AddComponent<GUIImageComponent>();
+
+	TextureHandler::GetInstance()->CreateTexture("test", "Resources/Textures/CheckerboardTexture.png");
+	gui->GetComponent<GUIImageComponent>()->OnCreate("test", glm::vec2(500.0f, 50.0f), glm::vec2(0.05f));
+	SceneGraph::GetInstance()->AddGUIObject(gui);
 
 	return true;
 }
@@ -36,4 +42,8 @@ void GameScene::Update(const float deltaTime_) {
 
 void GameScene::Render() {
 	SceneGraph::GetInstance()->Render(CoreEngine::GetInstance()->GetCamera());
+}
+
+void GameScene::Draw() {
+	SceneGraph::GetInstance()->Draw(CoreEngine::GetInstance()->GetCamera());
 }

@@ -16,6 +16,7 @@ public:
 	virtual bool OnCreate();
 	virtual void Update(const float deltaTime);
 	virtual void Render();
+	virtual void Draw();
 private:
 	void BuildScene();
 };

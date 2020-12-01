@@ -1,1 +1,14 @@
-﻿  OooOooEngine.vcxproj -> E:\Visual Studio Projects\3D-Game-Engine\Debug\OooOooEngine.exe
+﻿  GUIImageComponent.cpp
+  SpriteSurface.cpp
+E:\Visual Studio Projects\3D-Game-Engine\OooOooEngine\Engine\GUI\SpriteSurface.cpp(13,22): warning C4244: '=': conversion from 'const float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\Visual Studio Projects\3D-Game-Engine\OooOooEngine\Engine\GUI\SpriteSurface.cpp(14,22): warning C4244: '=': conversion from 'const float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  Generating Code...
+  OooOooEngine.vcxproj -> E:\Visual Studio Projects\3D-Game-Engine\Debug\OooOooEngine.exe
