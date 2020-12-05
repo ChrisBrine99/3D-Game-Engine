@@ -1,5 +1,108 @@
 [INFO]: GPU -- GeForce GTX 1060 6GB/PCIe/SSE2 in: Window.cpp on line: 47
-[INFO]: OpenGL Version -- 4.5.0 NVIDIA 457.30 in: Window.cpp on line: 48
+[INFO]: OpenGL Version -- 4.5.0 NVIDIA 457.51 in: Window.cpp on line: 48
 [INFO]: Creating Start Scene in: StartScene.cpp on line: 12
 [INFO]: Everything has been initialized! in: CoreEngine.cpp on line: 44
-[INFO]: Creating Game Scene in: GameScene.cpp on line: 8
+[INFO]: Creating Game Scene in: GameScene.cpp on line: 10
+[INFO]: FMOD successfully initialized! in: AudioHandler.cpp on line: 34
+[INFO]: The audio file Test found at path Resources/Audio/MeepMeep.wav has been created! in: AudioHandler.cpp on line: 111
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to get mode! in: AudioHandler.cpp on line: 132
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123
+[ERROR]: Failed to properly play sound! in: AudioHandler.cpp on line: 123

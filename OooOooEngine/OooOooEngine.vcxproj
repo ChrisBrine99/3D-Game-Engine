@@ -69,12 +69,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\Game Dev Tools\OpenGL\include;E:\Game Dev Tools\SDL\2.0.12\include;E:\Game Dev Tools\Glm\0.9.9.8\glm;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\Game Dev Tools\FMOD\inc;E:\Game Dev Tools\OpenGL\include;E:\Game Dev Tools\SDL\2.0.12\include;E:\Game Dev Tools\Glm\0.9.9.8\glm;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Game Dev Tools\FMOD\lib\x86;E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\Game Dev Tools\OpenGL\include;E:\Game Dev Tools\SDL\2.0.12\include;E:\Game Dev Tools\Glm\0.9.9.8\glm;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\Game Dev Tools\FMOD\inc;E:\Game Dev Tools\OpenGL\include;E:\Game Dev Tools\SDL\2.0.12\include;E:\Game Dev Tools\Glm\0.9.9.8\glm;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Game Dev Tools\FMOD\lib\x86;E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,8 +85,8 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32.lib;glew32s.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Game Dev Tools\FMOD\lib\x86;E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -111,8 +111,8 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32.lib;glew32s.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Game Dev Tools\FMOD\lib\x86;E:\Game Dev Tools\SDL\2.0.12\lib;E:\Game Dev Tools\OpenGL\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Component\AudioSourceComponent.cpp" />
+    <ClCompile Include="Engine\Audio\AudioHandler.cpp" />
     <ClCompile Include="Engine\Math\CollisionHandler.cpp" />
     <ClCompile Include="Engine\Math\CollisionDetection.cpp" />
     <ClCompile Include="Engine\Camera\Camera.cpp" />
@@ -159,6 +161,8 @@
     <ClCompile Include="Engine\GUI\SpriteSurface.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Component\AudioSourceComponent.h" />
+    <ClInclude Include="Engine\Audio\AudioHandler.h" />
     <ClInclude Include="Engine\Component\Component.h" />
     <ClInclude Include="Engine\Math\CollisionHandler.h" />
     <ClInclude Include="Engine\Math\CollisionDetection.h" />

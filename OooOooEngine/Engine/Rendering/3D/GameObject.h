@@ -45,17 +45,19 @@ public:
 	void SetName(std::string name_);
 	std::string GetName() const;
 
-	template<typename T> void AddComponent() {
+	template<class T, class... Args> void AddComponent(Args&&... args) {
 		// Verifying that this Component isn't being added twice to the same object
 		if (T* t = GetComponent<T>()) {
 			DebugLogger::Warning("This component already exists on the game object!", "GameObject.h", __LINE__);
+			t = nullptr;
 			return;
 		}
 		// Ensuring that the component being added is actually a child of component
-		Component* component = dynamic_cast<Component*>(new T());
+		T* comp = new T(std::forward<Args>(args)...);
+		Component* component = dynamic_cast<Component*>(comp);
 		if (component == nullptr) {
 			DebugLogger::Error("Object attempting to be added isn't a child of the Component.h parent class!", "GameObject.h", __LINE__);
-			delete component, component = nullptr;
+			delete comp, comp = nullptr;
 			return;
 		}
 		// If the component passes both checks, add it to the vector
